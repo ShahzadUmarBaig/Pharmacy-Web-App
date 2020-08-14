@@ -12,3 +12,7 @@
     font-size: 3.5rem;
   }
 }
+
+.container-fluid .custom-container {
+  width: 100%;
+}
