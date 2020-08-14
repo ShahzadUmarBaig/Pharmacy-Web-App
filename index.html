@@ -22,25 +22,9 @@
     <!-- Bootstrap core CSS -->
     <link href="../assets/dist/css/bootstrap.css" rel="stylesheet" />
 
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
     <!-- Custom styles for this template -->
     <link href="carousel.css" rel="stylesheet" />
-
+    <link rel="stylesheet" href="index.css" />
     <title>MedKube</title>
   </head>
 
@@ -68,16 +52,13 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#">Catalog</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="//codeply.com">Codeply</a>
+                <a class="nav-link" href="#">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#">Contact</a>
               </li>
             </ul>
           </div>
@@ -89,7 +70,7 @@
           <div class="navbar-collapse collapse dual-nav w-50 order-2">
             <ul class="nav navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href=""
+                <a class="nav-link" href="" title="Sign In"
                   ><svg
                     width="1em"
                     height="1em"
@@ -108,11 +89,12 @@
                     <path
                       fill-rule="evenodd"
                       d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"
-                    /></svg
-                ></a>
+                    />
+                  </svg>
+                </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href=""
+                <a class="nav-link" href="" title="Cart"
                   ><svg
                     width="1em"
                     height="1em"
@@ -135,7 +117,7 @@
     </header>
 
     <main role="main">
-      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <div id="myCarousel" class="carousel slide mb-5" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
           <li data-target="#myCarousel" data-slide-to="1" class=""></li>
@@ -246,6 +228,27 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
+
+      <div class="container-fluid w-100">
+        <div class="row">
+          <div class="col">
+            <form class="form-inline mb-5">
+              <div class="form-group mx-sm-3">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="inputPassword2"
+                  placeholder="Password"
+                />
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Confirm identity
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
       <!-- Marketing messaging and featurettes
         ================================================== -->
       <!-- Wrap the rest of the page in another container to center all the content. -->
