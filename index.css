@@ -16,3 +16,8 @@
 .container-fluid .custom-container {
   width: 100%;
 }
+
+.cart-button {
+  all: unset;
+  color: #cccecf;
+}
