@@ -23,13 +23,14 @@
       crossorigin="anonymous"
     />
 
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/dist/css/bootstrap.css" rel="stylesheet" />
+
     <link
       rel="canonical"
       href="https://getbootstrap.com/docs/4.5/examples/carousel/"
     />
 
-    <!-- Bootstrap core CSS -->
-    <link href="../assets/dist/css/bootstrap.css" rel="stylesheet" />
 
     <!-- Custom styles for this template -->
     <link href="carousel.css" rel="stylesheet" />
@@ -184,7 +185,7 @@
                   dolor id nibh ultricies vehicula ut id elit.
                 </p>
                 <p>
-                  <a class="btn btn-lg btn-primary" href="#" role="button"
+                  <a class="btn btn-lg btn-primary" href="#about" role="button"
                     >Learn more</a
                   >
                 </p>
@@ -212,7 +213,7 @@
                   dolor id nibh ultricies vehicula ut id elit.
                 </p>
                 <p>
-                  <a class="btn btn-lg btn-primary" href="#" role="button"
+                  <a class="btn btn-lg btn-primary" href="product.html" role="button"
                     >Browse gallery</a
                   >
                 </p>
