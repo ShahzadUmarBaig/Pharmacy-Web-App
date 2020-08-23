@@ -126,11 +126,15 @@
 
     <div class="container-fluid">
       <div class="row">
+        
+      <!-- Sign In Method -->
+        
+      
         <div class="col text-center">
           <form class="form-signin">
             <img
               class="mb-4 bg-dark p-3 rounded"
-              src="/images/medlogo.png"
+              src="images/medlogo.png"
               alt=""
               width="90"
               height="90"
@@ -163,11 +167,17 @@
             </button>
           </form>
         </div>
+        
+<!-- Sign In Method -->
+        
+
+        <!-- Sign Up Method -->
+        
         <div class="col text-center">
           <form class="form-signup">
             <img
               class="mb-4 bg-dark p-3 rounded"
-              src="/images/medlogo.png"
+              src="images/medlogo.png"
               alt=""
               width="90"
               height="90"
@@ -203,6 +213,9 @@
             </button>
           </form>
         </div>
+
+        <!-- Sign Up Method -->
+        
       </div>
       <footer>
         <p class="mt-5 mb-3 fixed-bottom text-center text-muted">

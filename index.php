@@ -80,7 +80,7 @@
           <div class="navbar-collapse collapse dual-nav w-50 order-2">
             <ul class="nav navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="singin.html" title="Sign In"
+                <a class="nav-link" href="singin.php" title="Sign In"
                   ><svg
                     width="1em"
                     height="1em"
@@ -137,17 +137,7 @@
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <svg
-              class="bd-placeholder-img"
-              width="100%"
-              height="100%"
-              xmlns="http://www.w3.org/2000/svg"
-              preserveAspectRatio="xMidYMid slice"
-              focusable="false"
-              role="img"
-            >
-            <img src="/images/delivery.jpg" alt="bike">
-              </svg>
+          <img src="images/delivery.jpg" alt="bike">
             <div class="container">
               <div class="carousel-caption text-left">
                 <h1>Example headline.</h1>
@@ -193,17 +183,7 @@
             </div>
           </div>
           <div class="carousel-item">
-            <svg
-              class="bd-placeholder-img"
-              width="100%"
-              height="100%"
-              xmlns="http://www.w3.org/2000/svg"
-              preserveAspectRatio="xMidYMid slice"
-              focusable="false"
-              role="img"
-            >
-              <img src="/images/delivery.png" alt="delivery">
-            </svg>
+          <img src="images/delivery.png" alt="delivery">
             <div class="container">
               <div class="carousel-caption text-right">
                 <h1>One more for good measure.</h1>
@@ -283,7 +263,7 @@
         <div class="row">
           <div class="col-lg-4">
             <img
-              src="/images/insulin.jpg"
+              src="images/insulin.jpg"
               alt="medicine"
               height="140"
               width="140"
@@ -305,7 +285,7 @@
           <!-- /.col-lg-4 -->
           <div class="col-lg-4">
             <img
-              src="/images/surgical equipment.jfif"
+              src="images/surgical equipment.jfif"
               alt="medlogo"
               height="140"
               width="140"
@@ -326,7 +306,7 @@
           <!-- /.col-lg-4 -->
           <div class="col-lg-4">
             <img
-              src="/images/Medicine.webp"
+              src="images/Medicine.webp"
               alt="medicine"
               height="140"
               width="140"
