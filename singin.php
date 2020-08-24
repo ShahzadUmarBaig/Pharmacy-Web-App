@@ -170,11 +170,21 @@
         
 <!-- Sign In Method -->
         
+<div>
+<?php
+if(isset($_POST['create'])){
+echo 'User Submitted';
 
+}
+
+?>
+
+
+</div>
         <!-- Sign Up Method -->
         
         <div class="col text-center">
-          <form class="form-signup">
+          <form class="form-signup" method="post" action="signin.php" >
             <img
               class="mb-4 bg-dark p-3 rounded"
               src="images/medlogo.png"
@@ -208,7 +218,7 @@
               placeholder="Contact"
               required
             />
-            <button class="btn btn-lg btn-primary btn-block" type="submit">
+            <button class="btn btn-lg btn-primary btn-block" name="create" type="submit">
               Sign Up
             </button>
           </form>
