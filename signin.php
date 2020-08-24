@@ -218,7 +218,9 @@ echo 'User Submitted';
               placeholder="Contact"
               required
             />
-            <button class="btn btn-lg btn-primary btn-block" name="create" type="submit">
+
+            <input type="submit" name="create" value="Sign Up" class="btn btn-lg btn-primary btn-block">
+            <button class="btn btn-lg btn-primary btn-block" type="submit">
               Sign Up
             </button>
           </form>
