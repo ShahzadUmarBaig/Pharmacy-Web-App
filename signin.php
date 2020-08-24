@@ -219,8 +219,7 @@ echo 'User Submitted';
               required
             />
 
-            <input type="submit" name="create" value="Sign Up" class="btn btn-lg btn-primary btn-block">
-            <button class="btn btn-lg btn-primary btn-block" type="submit">
+            <button class="btn btn-lg btn-primary btn-block" name="create" type="submit">
               Sign Up
             </button>
           </form>
