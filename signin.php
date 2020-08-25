@@ -23,22 +23,7 @@
     <!-- Bootstrap core CSS -->
     <link href="../assets/dist/css/bootstrap.css" rel="stylesheet" />
 
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
     <!-- Custom styles for this template -->
     <link href="signin.css" rel="stylesheet" />
   </head>
@@ -124,8 +109,6 @@
       </nav>
     </header>
 
-    <div class="container-fluid">
-          <div>
             <?php
               if(isset($_POST['create']))
               {
@@ -145,7 +128,11 @@
                 $sql = "INSERT INTO users (Email, Password, Contact, isAdmin) VALUES ('$email','$password','$contact',0)";
 
                 if ($conn->query($sql) === TRUE) {
-                  
+                  echo '<div class="container-fluid">
+                          <div class="alert alert-success" role="alert">
+                            A simple success alert—check it out!
+                          </div>
+                        </div>';
                 } else {
                   echo "Error: " . $sql . "<br>" . $conn->error;
                 }
@@ -153,16 +140,12 @@
                 $conn->close();
               }
             ?>
-          </div>
-    </div>
+  
 
-    <div class="container-fluid">
+    <div class="container-fluid w-100">
       <div class="row">
-        
       <!-- Sign In Method -->
-        
-      
-        <div class="col text-center">
+        <div class="col-6 text-center">
           <form class="form-signin">
             <img
               class="mb-4 bg-dark p-3 rounded"
@@ -200,12 +183,12 @@
           </form>
         </div>
         
-    <!-- Sign In Method -->
+      <!-- Sign In Method -->
         
 
-    <!-- Sign Up Method -->
+      <!-- Sign Up Method -->
         
-        <div class="col text-center">
+        <div class="col-6  text-center">
           <form class="form-signup" method="post" action="signin.php" >
             <img
               class="mb-4 bg-dark p-3 rounded"
@@ -253,11 +236,13 @@
         <!-- Sign Up Method -->
         
       </div>
+    </div>
+
+
       <footer>
         <p class="mt-5 mb-3 fixed-bottom text-center text-muted">
           &copy; By Shahzad Umar Baig
         </p>
       </footer>
-    </div>
   </body>
 </html>
