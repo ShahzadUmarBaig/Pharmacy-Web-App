@@ -80,7 +80,7 @@
           <div class="navbar-collapse collapse dual-nav w-50 order-2">
             <ul class="nav navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="singin.php" title="Sign In"
+                <a class="nav-link" href="signin.php" title="Sign In"
                   ><svg
                     width="1em"
                     height="1em"

@@ -61,7 +61,7 @@
           >
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link pl-0" href="/"
+                <a class="nav-link pl-0" href="index.php"
                   >Home <span class="sr-only">Home</span></a
                 >
               </li>
@@ -78,7 +78,7 @@
           <div class="navbar-collapse collapse dual-nav w-50 order-2">
             <ul class="nav navbar-nav ml-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="singin.html" title="Sign In"
+                <a class="nav-link" href="signin.php" title="Sign In"
                   ><svg
                     width="1em"
                     height="1em"
@@ -125,6 +125,38 @@
     </header>
 
     <div class="container-fluid">
+          <div>
+            <?php
+              if(isset($_POST['create']))
+              {
+                $email = $_POST['email'];
+                $password = $_POST['password'];
+                $contact = $_POST['contact'];
+
+                $servername = "localhost";
+                $username = "root";
+                $serverpass = "";
+                $dbname = "MedKube";
+
+                // Create connection
+                $conn = new mysqli($servername, $username, $serverpass, $dbname);
+                // Check connection
+
+                $sql = "INSERT INTO users (Email, Password, Contact, isAdmin) VALUES ('$email','$password','$contact',0)";
+
+                if ($conn->query($sql) === TRUE) {
+                  
+                } else {
+                  echo "Error: " . $sql . "<br>" . $conn->error;
+                }
+                
+                $conn->close();
+              }
+            ?>
+          </div>
+    </div>
+
+    <div class="container-fluid">
       <div class="row">
         
       <!-- Sign In Method -->
@@ -168,20 +200,10 @@
           </form>
         </div>
         
-<!-- Sign In Method -->
+    <!-- Sign In Method -->
         
-<div>
-<?php
-if(isset($_POST['create'])){
-echo 'User Submitted';
 
-}
-
-?>
-
-
-</div>
-        <!-- Sign Up Method -->
+    <!-- Sign Up Method -->
         
         <div class="col text-center">
           <form class="form-signup" method="post" action="signin.php" >
@@ -197,6 +219,7 @@ echo 'User Submitted';
             <input
               type="email"
               id="inputEmail"
+              name="email"
               class="form-control"
               placeholder="Email address"
               required
@@ -206,6 +229,7 @@ echo 'User Submitted';
             <input
               type="password"
               id="inputPassword"
+              name="password"
               class="form-control password"
               placeholder="Password"
               required
@@ -214,6 +238,7 @@ echo 'User Submitted';
             <input
               type="text"
               id="inputNo"
+              name="contact"
               class="form-control"
               placeholder="Contact"
               required
