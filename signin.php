@@ -128,18 +128,19 @@
                 $contactcheck = 'SELECT * FROM users WHERE Contact = '. $contact .'';
                 $result = $conn->query($contactcheck);
 
-                $message = "User is already registered!";
+                $fail = "User is already registered!";
+                $success = "User is already registered!";
 
                 if ($result->num_rows > 0) {
 
-                 echo "<script type='text/javascript'>alert('$message');</script>";
+                 echo "<script type='text/javascript'>alert('$fail');</script>";
 
                 } else {
 
                   $sql = "INSERT INTO users (Email, Password, Contact, isAdmin) VALUES ('$email','$password','$contact',0)";
 
                   if ($conn->query($sql) === TRUE) {
-                    echo 'A simple success alert—check it out!';
+                    echo "<script type='text/javascript'>alert('$success');</script>";
                   } else {
                     echo "Error: " . $sql . "<br>" . $conn->error;
                   }
