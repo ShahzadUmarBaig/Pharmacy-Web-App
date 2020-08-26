@@ -125,18 +125,26 @@
                 $conn = new mysqli($servername, $username, $serverpass, $dbname);
                 // Check connection
 
-                $sql = "INSERT INTO users (Email, Password, Contact, isAdmin) VALUES ('$email','$password','$contact',0)";
+                $contactcheck = 'SELECT * FROM users WHERE Contact = '. $contact .'';
+                $result = $conn->query($contactcheck);
 
-                if ($conn->query($sql) === TRUE) {
-                  echo '<div class="container-fluid">
-                          <div class="alert alert-success" role="alert">
-                            A simple success alert—check it out!
-                          </div>
-                        </div>';
+                $message = "User is already registered!";
+
+                if ($result->num_rows > 0) {
+
+                 echo "<script type='text/javascript'>alert('$message');</script>";
+
                 } else {
-                  echo "Error: " . $sql . "<br>" . $conn->error;
+
+                  $sql = "INSERT INTO users (Email, Password, Contact, isAdmin) VALUES ('$email','$password','$contact',0)";
+
+                  if ($conn->query($sql) === TRUE) {
+                    echo 'A simple success alert—check it out!';
+                  } else {
+                    echo "Error: " . $sql . "<br>" . $conn->error;
+                  }
                 }
-                
+
                 $conn->close();
               }
             ?>
