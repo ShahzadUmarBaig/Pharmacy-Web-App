@@ -200,28 +200,36 @@
             // output data of each row
              while($row = $result->fetch_assoc())
               {
-                echo $row["ID"]. $row["Title"]. $row["Description"]. $row["Price"]. $row["inStock"]. "<br />";
+                
+                $ID = $row["ID"];
+                $Title = $row["Title"];
+                $Description = $row["Description"];
+                $Price = $row["Price"];
+                $inStock = $row["inStock"];
+                $ImageURL = $row["Image"];
+
                 echo "<div class='card mx-3 my-3' style='width: 18rem'>
-                <img class='card-img-top' src=". $row["Image"] ." height='200'
+                <img class='card-img-top' src=". $ImageURL ." height='200'
                 alt='Card image cap' />
                 <div class='card-body'>
-                <h5 class='card-title'>" . $row["Title"] . "</h5>
-                <p class='card-text'>". $row["Description"] ."</p>
-                <a href='#' class='btn btn-danger'>
+                <h5 class='card-title'>" . $Title . "</h5>
+                <p class='card-text'>". $Description ."</p>
+                <button id='demo' onClick='myFunction('$Description')' class='btn btn-danger'>
                   <svg
-                    width='1em'
-                    height='1em'
+                    width='1.1em'
+                    height='1.1em'
                     viewBox='0 0 16 16'
-                    class='bi bi-cart'
+                    class='bi bi-cart my-1'
                     fill='currentColor'
                     xmlns='http://www.w3.org/2000/svg'
                     >
                       <path
                       fill-rule='evenodd'
-                      d='M12 1H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zM8.5 6a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V10a.5.5 0 0 0 1 0V8.5H10a.5.5 0 0 0 0-1H8.5V6z'
+                      d='M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z'
                     /></svg
                   >
-                </a>
+                </button>
+                <span href='#' class='card-link mx-3'>PKR ".$Price.".00</span>
                 </div>
               </div>"; 
             } 
@@ -422,7 +430,7 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"
       ></script>
-      <script src="index.js"></script>
+      <script src="product.js"></script>
     </scripts>
   </body>
 </html>
