@@ -49,24 +49,24 @@
           >
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link pl-0" href="index.html"
+                <a class="nav-link pl-0" href="index.php"
                   >Home <span class="sr-only">Home</span></a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="product.html">Catalog</a>
+                <a class="nav-link" href="product.php">Catalog</a>
               </li>
             </ul>
           </div>
           <a
-            href="/"
+            href="index.php"
             class="navbar-brand mx-auto d-block text-center order-0 order-md-1 w-25"
             >MedKube</a
           >
           <div class="navbar-collapse collapse dual-nav w-50 order-2">
             <ul class="nav navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="singin.html" title="Sign In"
+                <a class="nav-link" href="signin.php" title="Sign In"
                   ><svg
                     width="1em"
                     height="1em"
@@ -90,7 +90,7 @@
                 </a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="" title="Cart">
+                <a class="nav-link" href="cart.php" title="Cart">
                   <svg
                     width="1em"
                     height="1em"

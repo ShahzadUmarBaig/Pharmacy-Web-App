@@ -51,12 +51,12 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="product.html">Catalog</a>
+                <a class="nav-link" href="product.php">Catalog</a>
               </li>
             </ul>
           </div>
           <a
-            href="/"
+            href="index.php"
             class="navbar-brand mx-auto d-block text-center order-0 order-md-1 w-25"
             >MedKube</a
           >
@@ -87,7 +87,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="cart.html" title="Cart">
+                <a class="nav-link" href="cart.php" title="Cart">
                   <svg
                     width="1em"
                     height="1em"
@@ -109,53 +109,14 @@
       </nav>
     </header>
 
-            <?php
-              if(isset($_POST['create']))
-              {
-                $email = $_POST['email'];
-                $password = $_POST['password'];
-                $contact = $_POST['contact'];
-
-                $servername = "localhost";
-                $username = "root";
-                $serverpass = "";
-                $dbname = "MedKube";
-
-                // Create connection
-                $conn = new mysqli($servername, $username, $serverpass, $dbname);
-                // Check connection
-
-                $contactcheck = 'SELECT * FROM users WHERE Contact = '. $contact .'';
-                $result = $conn->query($contactcheck);
-
-                $fail = "User is already registered!";
-                $success = "User is already registered!";
-
-                if ($result->num_rows > 0) {
-
-                 echo "<script type='text/javascript'>alert('$fail');</script>";
-
-                } else {
-
-                  $sql = "INSERT INTO users (Email, Password, Contact, isAdmin) VALUES ('$email','$password','$contact',0)";
-
-                  if ($conn->query($sql) === TRUE) {
-                    echo "<script type='text/javascript'>alert('$success');</script>";
-                  } else {
-                    echo "Error: " . $sql . "<br>" . $conn->error;
-                  }
-                }
-
-                $conn->close();
-              }
-            ?>
+            
   
 
     <div class="container-fluid w-100">
       <div class="row">
       <!-- Sign In Method -->
         <div class="col-6 text-center">
-          <form class="form-signin">
+          <form class="form-signin" method="POST" action="signin.php">
             <img
               class="mb-4 bg-dark p-3 rounded"
               src="images/medlogo.png"
@@ -168,6 +129,7 @@
             <input
               type="email"
               id="inputEmail"
+              name="login_email"
               class="form-control"
               placeholder="Email address"
               required
@@ -177,6 +139,7 @@
             <input
               type="password"
               id="inputPassword"
+              name="login_password"
               class="form-control"
               placeholder="Password"
               required
@@ -198,7 +161,7 @@
       <!-- Sign Up Method -->
         
         <div class="col-6  text-center">
-          <form class="form-signup" method="post" action="signin.php" >
+          <form class="form-signup" method="post" action="registration.php" >
             <img
               class="mb-4 bg-dark p-3 rounded"
               src="images/medlogo.png"

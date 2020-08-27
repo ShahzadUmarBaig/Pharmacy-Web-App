@@ -57,12 +57,12 @@
           >
             <ul class="navbar-nav">
               <li class="nav-item active">
-                <a class="nav-link pl-0" href="#"
+                <a class="nav-link pl-0" href="index.php"
                   >Home <span class="sr-only">Home</span></a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="product.html">Catalog</a>
+                <a class="nav-link" href="product.php">Catalog</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#about">About</a>
@@ -73,7 +73,7 @@
             </ul>
           </div>
           <a
-            href="/"
+            href="index.php"
             class="navbar-brand mx-auto d-block text-center order-0 order-md-1 w-25"
             >MedKube</a
           >
@@ -104,7 +104,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="" title="Cart">
+                <a class="nav-link" href="cart.php" title="Cart">
                   <svg
                     width="1em"
                     height="1em"
@@ -147,7 +147,7 @@
                   dolor id nibh ultricies vehicula ut id elit.
                 </p>
                 <p>
-                  <a class="btn btn-lg btn-primary" href="singin.html" role="button"
+                  <a class="btn btn-lg btn-primary" href="signin.php" role="button"
                     >Sign up today</a
                   >
                 </p>
@@ -193,7 +193,7 @@
                   dolor id nibh ultricies vehicula ut id elit.
                 </p>
                 <p>
-                  <a class="btn btn-lg btn-primary" href="product.html" role="button"
+                  <a class="btn btn-lg btn-primary" href="product.php" role="button"
                     >Browse gallery</a
                   >
                 </p>
@@ -305,7 +305,7 @@
               at your door step.
             </p>
             <p>
-              <a class="btn btn-secondary" href="product.html" role="button"
+              <a class="btn btn-secondary" href="product.php" role="button"
                 >View details »</a
               >
             </p>
@@ -326,7 +326,7 @@
               chance to avail the first customer discount.
             </p>
             <p>
-              <a class="btn btn-secondary" href="product.html" role="button"
+              <a class="btn btn-secondary" href="product.php" role="button"
                 >View details »</a
               >
             </p>
@@ -347,7 +347,7 @@
               You are one click away!
             </p>
             <p>
-              <a class="btn btn-secondary" href="product.html" role="button"
+              <a class="btn btn-secondary" href="product.php" role="button"
                 >View details »</a
               >
             </p>
@@ -492,7 +492,7 @@
           <div class="col-12 col-md-8 col-lg-6 pb-5">
             <!--Form with header-->
 
-            <form action="mail.php" method="post">
+            <form action="feedback.php" method="POST">
               <div class="card-body p-3">
                 <!--Body-->
                 <div class="form-group">
@@ -540,6 +540,7 @@
                     <textarea
                       class="form-control"
                       placeholder="Enter Your Message"
+                      name="Message"
                       required
                       style="height: 80px; resize: none;"
                     ></textarea>
@@ -549,6 +550,7 @@
                   <input
                     type="submit"
                     value="Submit"
+                    name="create"
                     class="btn btn-lg btn-primary btn-block py-2"
                   />
                 </div>

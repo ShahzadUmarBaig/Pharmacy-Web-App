@@ -57,7 +57,7 @@
                 >
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="product.html">Catalog</a>
+                <a class="nav-link" href="product.php">Catalog</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#about">About</a>
@@ -68,14 +68,14 @@
             </ul>
           </div>
           <a
-            href="/"
+            href="index.php"
             class="navbar-brand mx-auto d-block text-center order-0 order-md-1 w-25"
             >MedKube</a
           >
           <div class="navbar-collapse collapse dual-nav w-50 order-2">
             <ul class="nav navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="singin.html" title="Sign In"
+                <a class="nav-link" href="signin.php" title="Sign In"
                   ><svg
                     width="1em"
                     height="1em"
@@ -99,7 +99,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="cart.html" title="Cart">
+                <a class="nav-link" href="cart.php" title="Cart">
                   <svg
                     width="1em"
                     height="1em"
@@ -214,7 +214,7 @@
         <div class="col-12 col-md-8 col-lg-6 pb-5">
           <!--Form with header-->
 
-          <form action="mail.php" method="post">
+          <form action="feedback.php" method="post">
             <div class="card-body p-3">
               <!--Body-->
               <div class="form-group">
@@ -271,6 +271,7 @@
                 <input
                   type="submit"
                   value="Submit"
+                  name="create"
                   class="btn btn-lg btn-primary btn-block py-2"
                 />
               </div>
