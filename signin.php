@@ -116,7 +116,7 @@
       <div class="row">
       <!-- Sign In Method -->
         <div class="col-6 text-center">
-          <form class="form-signin" method="POST" action="signin.php">
+          <form class="form-signin" method="POST" action="login.php">
             <img
               class="mb-4 bg-dark p-3 rounded"
               src="images/medlogo.png"
@@ -149,7 +149,7 @@
                 <input type="checkbox" value="remember-me" /> Remember me
               </label>
             </div>
-            <button class="btn btn-lg btn-primary btn-block" type="submit">
+            <button class="btn btn-lg btn-primary btn-block" name="login" type="submit">
               Sign in
             </button>
           </form>

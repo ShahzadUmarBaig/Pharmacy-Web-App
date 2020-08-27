@@ -14,7 +14,7 @@
                 $conn = new mysqli($servername, $username, $serverpass, $dbname);
                 // Check connection
 
-                $emailCheck = 'SELECT * FROM users WHERE Email = '. $email .'';
+                $emailCheck = 'SELECT * FROM users WHERE Email = "$email"';
                 $result = $conn->query($emailCheck);
 
                 $fail = "User is already registered!";
