@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      href="bootstrap/css/bootstrap.min.css"
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous"
     />
     <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      src="bootstrap/js/bootstrap.min.js"
       integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
       crossorigin="anonymous"
     ></script>
@@ -25,7 +25,7 @@
     />
 
     <!-- Bootstrap core CSS -->
-    <link href="../assets/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
 
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="product.css" />
@@ -214,7 +214,7 @@
                 <div class='card-body'>
                 <h5 class='card-title'>" . $Title . "</h5>
                 <p class='card-text'>". $Description ."</p>
-                <button id='demo' onClick='myFunction('$Description')' class='btn btn-danger'>
+                <button onClick='myFunction()' class='btn btn-danger'>
                   <svg
                     width='1.1em'
                     height='1.1em'
@@ -411,7 +411,7 @@
           );
       </script>
       <script
-        src="/docs/4.5/dist/js/bootstrap.bundle.min.js"
+        src="bootstrap/js/bootstrap.bundle.min.js"
         integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd"
         crossorigin="anonymous"
       ></script>
@@ -426,7 +426,7 @@
         crossorigin="anonymous"
       ></script>
       <script
-        src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        src="bootstrap/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"
       ></script>
