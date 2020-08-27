@@ -29,8 +29,6 @@
 
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="product.css" />
-    <link href="carousel.css" rel="stylesheet" />
-    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
     <!-- Nav Bar -->
@@ -137,7 +135,7 @@
 
     <!-- Search Bar -->
     <div class="container-fluid custom-container w-100">
-      <div class="row my-5">
+      <div class="d-flex justify-content-center row my-5">
         <div class="col pl-5">
           <div class="form-group">
             <input type="text" class="form-control" placeholder="Search" />
@@ -169,15 +167,76 @@
 
     <!-- Search Bar -->
 
-    <div class="container">
-      <div class="row"></div>
+    <div class="container-fluid justify-content-center" id="about">
+      <div class="d-flex row justify-content-center">
+        <!-- <div class="card mx-3 my-3" style="width: 18rem">
+          <img
+            class="card-img-top"
+            src="images/jeans3.jpg"
+            height="200"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div> -->
+
+        <?php
+          $servername = "localhost";
+          $username = "root";
+          $serverpass = "";
+          $dbname = "MedKube";
+
+          // Create connection
+          $conn = new mysqli($servername, $username, $serverpass, $dbname);
+          // Check connection  
+          $sql = "SELECT * FROM products";
+          $result = $conn->query($sql); if ($result->num_rows > 0) { 
+            // output data of each row
+             while($row = $result->fetch_assoc())
+              {
+                echo $row["ID"]. $row["Title"]. $row["Description"]. $row["Price"]. $row["inStock"]. "<br />";
+                echo "<div class='card mx-3 my-3' style='width: 18rem'>
+                <img class='card-img-top' src=". $row["Image"] ." height='200'
+                alt='Card image cap' />
+                <div class='card-body'>
+                <h5 class='card-title'>" . $row["Title"] . "</h5>
+                <p class='card-text'>". $row["Description"] ."</p>
+                <a href='#' class='btn btn-danger'>
+                  <svg
+                    width='1em'
+                    height='1em'
+                    viewBox='0 0 16 16'
+                    class='bi bi-cart'
+                    fill='currentColor'
+                    xmlns='http://www.w3.org/2000/svg'
+                    >
+                      <path
+                      fill-rule='evenodd'
+                      d='M12 1H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zM8.5 6a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V10a.5.5 0 0 0 1 0V8.5H10a.5.5 0 0 0 0-1H8.5V6z'
+                    /></svg
+                  >
+                </a>
+                </div>
+              </div>"; 
+            } 
+          }
+         else { 
+           echo "0 results";
+            }
+             $conn->close();
+              ?>
+      </div>
     </div>
 
-    <div class="container" id="about">
-      <div class="row text-center">
-        <div class="col">
-          <div class="card-header p-0"></div>
-        </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-3"></div>
       </div>
     </div>
 
@@ -263,7 +322,7 @@
                     class="form-control"
                     placeholder="Enter Your Message"
                     required
-                    style="height: 80px; resize: none;"
+                    style="height: 80px; resize: none"
                   ></textarea>
                 </div>
               </div>
