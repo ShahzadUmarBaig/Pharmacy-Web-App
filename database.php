@@ -11,30 +11,31 @@
         $serverpass = "";
         $dbname = "MedKube";
 
-        // Create connection
-        $conn = new mysqli($servername, $username, $serverpass, $dbname);
-        // Check connection
-        
-        $emailCheck = 'SELECT * FROM users WHERE Email = "$email"';
-      
-        $result = $conn->query($emailCheck);
-      
-        $fail = "User is already registered!";
-        $success = "User has been successfully registered!";
-      
-        if ($result->num_rows > 0)
-            {
-                echo "<script type='text/javascript'>alert('$fail');</script>";
+         // Create connection
+         $conn = new mysqli($servername, $username, $serverpass, $dbname);
+         // Check connection
+         
+         $create_product = "INSERT INTO users (Email, Password, Contact, isAdmin) VALUES ('$user_email', '$user_password', '$user_contact', '$user_isAdmin')";
+         
+         $emailCheck = "SELECT * FROM users WHERE Email = '$user_email'";
+         
+         $result = $conn->query($emailCheck);
+
+         $fail = "User is already registered!";
+         $success = "User has been successfully registered!";
+ 
+        if($result->num_rows > 0) {
+            echo "<script type='text/javascript'>alert('$fail');</script>";   
+            header("Location:modify.html");
+        } else 
+           {
+               if ($conn->query($create_product) === TRUE) {
+                header("Location:modify.html");
             } else {
-                $sql = "INSERT INTO users (Email, Password, Contact, isAdmin) VALUES ('$email','$password','$contact',0)";
-                if ($conn->query($sql) === TRUE) {
-                    header("Location:index.php");
-                } else {
-                    echo "Error: " . $sql . "<br>" . $conn->error;
-                }   
-            }
-       
-            $conn->close();   
+                echo "Error: " . $create_product . "<br>" . $conn->error;
+            }     
+        }
+         $conn->close();   
     }
     elseif (isset($_POST['product-create'])) 
     {
@@ -43,12 +44,6 @@
         $product_price = $_POST['product-price'];
         $product_instock = $_POST['product-instock'];
         $product_image = $_POST['product-image'];
-
-        echo $product_title . "</br>";
-        echo $product_desc . "</br>";
-        echo $product_price . "</br>";
-        echo $product_instock . "</br>";
-        echo $product_image . "</br>";
 
         $servername = "localhost";
         $username = "root";

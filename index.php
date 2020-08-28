@@ -220,35 +220,7 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
-
-      <?php
-      $servername = "localhost";
-      $username = "root";
-      $serverpass = "";
-      $dbname = "MedKube";
-
-      // Create connection
-      $conn = new mysqli($servername, $username, $serverpass, $dbname);
-      // Check connection
       
-      if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-      }
-      
-      $sql = "SELECT * FROM users";
-      $result = $conn->query($sql);
-      
-      if ($result->num_rows > 0) {
-        // output data of each row
-        while($row = $result->fetch_assoc()) {
-          echo $row["ID"]. $row["Email"]. $row["Password"]. $row["Contact"]. "<br>";
-        }
-      } else {
-        echo "0 results";
-      }
-      $conn->close();
-      ?>
-
       <!-- Search Bar -->
 
       <div class="container-fluid custom-container mb-5">
@@ -450,8 +422,8 @@
               aria-label="Placeholder: 500x500"
             >
               <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#eee"></rect>
-              <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
+              <rect width="100%" height="100%"  fill="#eee"></rect>
+             
             </svg>
           </div>
         </div>

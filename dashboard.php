@@ -101,7 +101,7 @@
             </ul>
             <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
             <span>Modify Database</span>
-              <a class="d-flex align-items-center text-muted" href="modify.php" aria-label="Add a new report">
+              <a class="d-flex align-items-center text-muted" href="modify.html" aria-label="Add a new report">
                 <span data-feather="plus-circle"></span>
               </a>
             </h6>
@@ -145,7 +145,6 @@
                       if ($result->num_rows > 0) {
                         // output data of each row
                         while($row = $result->fetch_assoc()) {
-                          echo $row["ID"]. $row["Email"]. $row["Password"]. $row["Contact"]. "<br>";
                           echo "<tr><td class=".$row["ID"].">".$row["ID"]."</td>
                           <td>".trim($row["Email"])."</td>
                           <td>".$row["Password"]."</td>
