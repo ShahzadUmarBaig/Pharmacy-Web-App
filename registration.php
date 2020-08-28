@@ -29,12 +29,11 @@
                     $sql = "INSERT INTO users (Email, Password, Contact, isAdmin) VALUES ('$email','$password','$contact',0)";
                     
                     if ($conn->query($sql) === TRUE) {
-                        echo "<script type='text/javascript'>alert('$success');</script>";
+                        header("Location:index.php");
                     } else {
                         echo "Error: " . $sql . "<br>" . $conn->error;
                     }
 
-                    header("Location:index.php");
                 }
 
                 $conn->close();
