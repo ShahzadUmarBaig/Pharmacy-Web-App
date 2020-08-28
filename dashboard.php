@@ -81,7 +81,7 @@
           <div class="sidebar-sticky pt-3">
             <ul class="nav flex-column">
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="#customers">
                   <span data-feather="users"></span>
                   Customers
                 </a>
@@ -93,7 +93,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="#products">
                   <span data-feather="shopping-cart"></span>
                   Products
                 </a>
@@ -110,7 +110,7 @@
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
         
-          <h2>Customers</h2>
+          <h2 id="customers">Customers</h2>
           <div class="table-responsive">
             <table class="table table-striped table-sm">
               <thead>
@@ -207,7 +207,7 @@
               </tbody>
             </table>
           </div>
-          <h2>Products</h2>
+          <h2 id="products">Products</h2>
           <div class="table-responsive">
             <table class="table table-striped table-sm">
               <thead>
