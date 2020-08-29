@@ -15,25 +15,25 @@
                 $conn = new mysqli($servername, $username, $serverpass, $dbname);
                 // Check connection
                 
-                $emailCheck = 'SELECT * FROM users WHERE Email = "$email"';
+                $emailCheck = "SELECT * FROM users WHERE Email = '$email'";
+         
                 $result = $conn->query($emailCheck);
-
+       
                 $fail = "User is already registered!";
                 $success = "User has been successfully registered!";
 
-                if ($result->num_rows > 0) {
-
-                 echo "<script type='text/javascript'>alert('$fail');</script>";
-                 
-                } else {
+              if($result->num_rows > 0) {
+                  echo "<script type='text/javascript'>alert('$fail');</script>";
+                  header("Location:index.php");
+                } else
+                {
+                  $sql = "INSERT INTO users (Email, Password, Contact, isAdmin) VALUES ('$email','$password','$contact',0)";
                     
-                    $sql = "INSERT INTO users (Email, Password, Contact, isAdmin) VALUES ('$email','$password','$contact',0)";
-                    
-                    if ($conn->query($sql) === TRUE) {
-                        header("Location:index.php");
-                    } else {
-                        echo "Error: " . $sql . "<br>" . $conn->error;
-                    }
+                  if ($conn->query($sql) === TRUE) {
+                      header("Location:index.php");
+                  } else {
+                      echo "Error: " . $sql . "<br>" . $conn->error;
+                  }
 
                 }
 

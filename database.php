@@ -15,7 +15,7 @@
          $conn = new mysqli($servername, $username, $serverpass, $dbname);
          // Check connection
          
-         $create_product = "INSERT INTO users (Email, Password, Contact, isAdmin) VALUES ('$user_email', '$user_password', '$user_contact', '$user_isAdmin')";
+         $create_user = "INSERT INTO users (Email, Password, Contact, isAdmin) VALUES ('$user_email', '$user_password', '$user_contact', '$user_isAdmin')";
          
          $emailCheck = "SELECT * FROM users WHERE Email = '$user_email'";
          
@@ -29,7 +29,7 @@
             header("Location:modify.html");
         } else 
            {
-               if ($conn->query($create_product) === TRUE) {
+               if ($conn->query($create_user) === TRUE) {
                 header("Location:modify.html");
             } else {
                 echo "Error: " . $create_product . "<br>" . $conn->error;
