@@ -16,12 +16,17 @@
 
     $sql = "INSERT INTO feedback (Name,Email,Message) VALUES ('$feed_name','$feed_email','$feed_message')";
                    
-                    if ($conn->query($sql) === TRUE) {
-                        echo "<script type='text/javascript'>alert('Message Has Been Delivered!');</script>";
-                    header("Location:index.php");  
-                    } else {
-                        echo "Error: " . $sql . "<br>" . $conn->error;
-                    }
+                  
+    if ($conn->query($sql) === TRUE) {
+    
+        echo "<script type='text/javascript'>alert('Message Has Been Delivered!');</script>";
+    
+        header("Location:index.php");  
+    
+    } else {
+    
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
 
 
     $conn->close();
