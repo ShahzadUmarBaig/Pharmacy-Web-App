@@ -5,6 +5,7 @@
                 $password = $_POST['password'];
                 $contact = $_POST['contact'];
 
+
                 $servername = "localhost";
                 $username = "root";
                 $serverpass = "";
@@ -13,7 +14,7 @@
                 // Create connection
                 $conn = new mysqli($servername, $username, $serverpass, $dbname);
                 // Check connection
-
+                
                 $emailCheck = 'SELECT * FROM users WHERE Email = "$email"';
                 $result = $conn->query($emailCheck);
 

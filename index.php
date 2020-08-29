@@ -220,7 +220,7 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
-      
+
       <!-- Search Bar -->
 
       <div class="container-fluid custom-container mb-5">
@@ -346,20 +346,18 @@
             </p>
           </div>
           <div class="col-md-5">
-            <svg
-              class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+          <img
+              src="images/insulin.jpg"
+              alt="medlogo"
               width="500"
               height="500"
+              class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
               xmlns="http://www.w3.org/2000/svg"
               preserveAspectRatio="xMidYMid slice"
               focusable="false"
               role="img"
               aria-label="Placeholder: 500x500"
-            >
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#eee"></rect>
-              <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
-            </svg>
+            />
           </div>
         </div>
 
@@ -379,20 +377,18 @@
             </p>
           </div>
           <div class="col-md-5 order-md-1">
-            <svg
-              class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+          <img
+              src="images/insulin.jpg"
+              alt="medlogo"
               width="500"
               height="500"
+              class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
               xmlns="http://www.w3.org/2000/svg"
               preserveAspectRatio="xMidYMid slice"
               focusable="false"
               role="img"
               aria-label="Placeholder: 500x500"
-            >
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#eee"></rect>
-              <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
-            </svg>
+            />
           </div>
         </div>
 
@@ -411,30 +407,28 @@
             </p>
           </div>
           <div class="col-md-5">
-            <svg
-              class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+          <img
+              src="images/insulin.jpg"
+              alt="medlogo"
               width="500"
               height="500"
+              class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
               xmlns="http://www.w3.org/2000/svg"
               preserveAspectRatio="xMidYMid slice"
               focusable="false"
               role="img"
               aria-label="Placeholder: 500x500"
-            >
-              <title>Placeholder</title>
-              <rect width="100%" height="100%"  fill="#eee"></rect>
-             
-            </svg>
+            />
           </div>
         </div>
 
-        <hr class="featurette-divider" id="about" />
+        <hr class="featurette-divider md-0" id="about" />
 
         <!-- /END THE FEATURETTES -->
       </div>
       <!-- About Page -->
 
-      <div class="starter-template">
+      <div class="starter-template mt-0 pt-0  ">
         <h1>About Us</h1>
         <p class="lead">
           Use this document as a way to quickly start any new project.<br />
