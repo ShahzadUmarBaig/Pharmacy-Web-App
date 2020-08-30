@@ -19,7 +19,7 @@
                   
     if ($conn->query($sql) === TRUE) {
     
-        echo "<script type='text/javascript'>alert('Message Has Been Delivered!');</script>";
+        echo "<script type='text/javascript'>alert('Message Has Been Sent!');</script>";
     
         header("Location:index.php");  
     
